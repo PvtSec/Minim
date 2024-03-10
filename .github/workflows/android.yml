@@ -3,8 +3,6 @@ name: Android CI
 on:
   push:
     branches: [ "slider" ]
-  pull_request:
-    branches: [ "slider" ]
 
 jobs:
   build:
