@@ -11,7 +11,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - name: set up JDK 11
+    - name: set up JDK
       uses: actions/setup-java@v3
       with:
         java-version: '17'
@@ -26,3 +26,9 @@ jobs:
 
     - name: Build release apk
       run: ./gradlew assemble
+    
+    - name: Save artifacts
+      uses: actions/upload-artifact@v4.3.1
+      with:
+        name: app-release
+        path: app/build/outputs/apk/release/app-release.apk
