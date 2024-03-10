@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Home"
+    android:background="@color/black"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="50sp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/time_field"
+            android:textColor="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textSize="50sp"
+            android:fontFamily="@font/date_time_font"
+            android:text="@string/time_placeholder"/>
+        <TextView
+            android:id="@+id/date_field"
+            android:textColor="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textSize="13sp"
+            android:layout_marginTop="5sp"
+            android:fontFamily="@font/date_time_font"
+            android:text="@string/date_placeholder"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+        <ImageView
+            android:layout_width="15sp"
+            android:layout_height="15sp"
+            android:src="@drawable/zap"
+            tools:ignore="SmallSp"
+            android:importantForAccessibility="no" />
+        <View
+            android:id="@+id/batteryStatus"
+            android:layout_width="0dp"
+            android:layout_height="1.5sp"
+            android:layout_weight="1"
+            android:background="@android:color/white"
+            tools:ignore="SmallSp" />
+    </LinearLayout>
+
+</LinearLayout>

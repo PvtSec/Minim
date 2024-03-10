@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Minim</string>
+    <string name="time_placeholder">--:-- --</string>
+    <string name="date_placeholder">-----, 00 -----</string>
+</resources>
