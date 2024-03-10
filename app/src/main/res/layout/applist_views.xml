@@ -2,7 +2,39 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
+    tools:context=".views.appListViews"
     android:background="@color/black">
+
+    <EditText
+        android:textColor="@color/white"
+        android:id="@+id/search_field"
+        android:layout_marginTop="5sp"
+        android:layout_width="250sp"
+        android:layout_height="wrap_content"
+        android:padding="5sp"
+        android:paddingLeft="10sp"
+        android:paddingRight="10sp"
+        android:layout_gravity="center"
+        android:textAlignment="center"
+        android:background="@drawable/rounded_corner"
+        android:textColorHint="#33FFFFFF"
+        android:focusable="true"
+        android:focusedByDefault="true"
+        android:hint="@string/app_search_placeholder"
+        android:importantForAutofill="no"
+        android:inputType="text" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1sp"
+        android:background="@color/white"
+        tools:ignore="SmallSp"
+        android:layout_marginVertical="10sp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/appListView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
 
 </LinearLayout>
