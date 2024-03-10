@@ -13,7 +13,7 @@
         android:theme="@style/Theme.Minim"
         tools:targetApi="31">
         <activity
-            android:name=".Home"
+            android:name=".launchModule"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
