@@ -1,5 +1,6 @@
-package com.min.im;
+package com.min.im.utils;
 
+import android.annotation.SuppressLint;
 import android.widget.TextView;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -9,9 +10,8 @@ import java.util.Map;
 import android.os.Handler;
 import android.os.Looper;
 
-
-
 public class ClockUpdater {
+    @SuppressLint("StaticFieldLeak")
     private static ClockUpdater instance;
     private final Handler handler;
     private final TextView timeField;

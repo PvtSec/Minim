@@ -1,5 +1,6 @@
-package com.min.im;
+package com.min.im.utils;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.os.BatteryManager;
 import android.os.Handler;
@@ -9,6 +10,7 @@ import android.util.DisplayMetrics;
 import android.view.WindowManager;
 
 public class BatteryUpdater {
+    @SuppressLint("StaticFieldLeak")
     private static BatteryUpdater instance;
     private final Handler handler;
     private final Context context;

@@ -4,6 +4,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
 import android.widget.TextView;
+import com.min.im.utils.ClockUpdater;
+import com.min.im.utils.BatteryUpdater;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class Home extends AppCompatActivity {
