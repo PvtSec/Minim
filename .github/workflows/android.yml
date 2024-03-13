@@ -24,10 +24,19 @@ jobs:
     - name: Build gradle project
       run: ./gradlew build
 
+    - name: Build debug apk
+      run: ./gradlew assembleDebug
+
     - name: Build release apk
       run: ./gradlew assembleRelease
     
-    - name: Save artifacts
+    - name: Save debug apk
+      uses: actions/upload-artifact@v4.3.1
+      with:
+        name: app-debug
+        path: app/build/outputs/apk/debug/*.apk
+    
+    - name: Save release apk
       uses: actions/upload-artifact@v4.3.1
       with:
         name: app-release
