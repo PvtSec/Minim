@@ -1,23 +1,23 @@
 package com.min.im.adapters;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-
 import com.min.im.R;
 
-import java.util.List;
-
+import java.util.ArrayList;
+import java.util.Map;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 public class AppListAdapter extends RecyclerView.Adapter<AppListAdapter.ViewHolder> {
     private Context context;
-    private List<String> appList;
+    private Map<String, Intent> appList;
 
-    public AppListAdapter(Context context, List<String> appList) {
+    public AppListAdapter(Context context, Map<String, Intent> appList) {
         this.context = context;
         this.appList = appList;
     }
@@ -31,8 +31,15 @@ public class AppListAdapter extends RecyclerView.Adapter<AppListAdapter.ViewHold
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        String appName = appList.get(position);
+        String appName = (new ArrayList<>(appList.keySet())).get(position);
         holder.appNameTextView.setText(appName);
+        holder.appNameTextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent appLauncher = appList.get(appName);
+                context.startActivity(appLauncher);
+            }
+        });
     }
 
     @Override
